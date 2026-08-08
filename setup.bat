@@ -6,9 +6,7 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
-echo Installing PyTorch with CUDA 12.4 support...
-venv\Scripts\pip install torch --index-url https://download.pytorch.org/whl/cu124
-echo Installing remaining dependencies...
+echo Installing dependencies (this may take a few minutes)...
 venv\Scripts\pip install -r requirements.txt
 echo.
 echo Done! Place your comma-separated terms in input.txt, then run:
