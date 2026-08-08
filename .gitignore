@@ -1,0 +1,5 @@
+venv/
+model/
+output.txt
+__pycache__/
+*.pyc
