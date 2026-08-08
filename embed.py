@@ -1,15 +1,18 @@
 from FlagEmbedding import BGEM3FlagModel
+import torch
 
 INPUT_FILE = "input.txt"
 OUTPUT_FILE = "output.txt"
 MODEL_NAME = "BAAI/bge-m3"
+
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
     raw = f.read()
 
 terms = [t.strip().replace("_", " ") for t in raw.split(",") if t.strip()]
 
-model = BGEM3FlagModel(MODEL_NAME, use_fp16=True)  # uses GPU if available, else CPU
+model = BGEM3FlagModel(MODEL_NAME, use_fp16=True, device=DEVICE)
 result = model.encode(terms, batch_size=32)
 dense_vecs = result["dense_vecs"]  # shape: (N, dim), float32
 
