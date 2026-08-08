@@ -12,18 +12,18 @@ setup.bat
 
 This creates a virtual environment and installs all dependencies. The BGE-M3 model (~2.3 GB) downloads on first run.
 
+## Running
+
+```
+venv\Scripts\python.exe embed.py
+```
+
 ## Input
 
 A plain `.txt` file named `input.txt` containing comma-separated terms (1–2 words each). Underscores are treated as spaces.
 
 ```
 holy, fire, goblin, earth, winter, demon_prince
-```
-
-## Running
-
-```
-venv\Scripts\python.exe embed.py
 ```
 
 ## Output
