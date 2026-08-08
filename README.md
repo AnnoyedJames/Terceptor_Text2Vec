@@ -31,8 +31,8 @@ venv\Scripts\python.exe embed.py
 `output.txt` — one entry per line, each a `[term, vector]` pair:
 
 ```
-['fire truck', [0.0234, -0.0412, ..., 0.0071]]
-['ambulance',  [0.0198, -0.0387, ..., 0.0103]]
+['holy', [0.0234, -0.0412, ..., 0.0071]]
+['fire',  [0.0198, -0.0387, ..., 0.0103]]
 ```
 
 Vectors are FP32, 1024 dimensions.

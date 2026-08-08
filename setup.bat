@@ -9,6 +9,8 @@ if errorlevel 1 (
 echo Installing dependencies (this may take a few minutes)...
 venv\Scripts\pip install -r requirements.txt
 echo.
-echo Done! Place your comma-separated terms in input.txt, then run:
+echo Place your comma-separated terms in input.txt
+echo Like this: tag, tag, tag, tag
+echo Then run:
 echo   venv\Scripts\python.exe embed.py
 pause
