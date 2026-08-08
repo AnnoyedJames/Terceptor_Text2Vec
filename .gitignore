@@ -1,5 +1,6 @@
 venv/
 model/
 output.txt
+embedding_visualization.html
 __pycache__/
 *.pyc

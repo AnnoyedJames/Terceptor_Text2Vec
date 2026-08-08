@@ -36,3 +36,25 @@ holy, fire, goblin, earth, winter, demon_prince
 ```
 
 Vectors are FP32, 1024 dimensions.
+
+## Visualization
+
+After generating `output.txt`, create an interactive 3D UMAP map:
+
+```
+venv\Scripts\python.exe visualize.py
+```
+
+This opens `embedding_visualization.html` in the browser. Labels are visible by
+default, and the Show labels/Hide labels control lets you declutter the map.
+Hovering a point also shows its term. The projection uses cosine distance with
+up to 15 neighbors, `min_dist=0.1`, and a fixed random seed.
+
+For a 2D visualization:
+
+```
+venv\Scripts\python.exe visualize.py --dimensions 2
+```
+
+The map is useful for inspecting clusters and neighborhoods, but its 2D/3D
+distances are not exact cosine similarities from the original embedding space.
