@@ -14,9 +14,14 @@ This creates a virtual environment and installs all dependencies. The BGE-M3 mod
 
 ## Running
 
+Double-click `start_embed.bat`, or run:
+
 ```
-venv\Scripts\python.exe embed.py
+.\start_embed.bat
 ```
+
+It creates the virtual environment and installs any missing dependencies before
+embedding the terms in `input.txt`.
 
 ## Input
 
@@ -42,7 +47,7 @@ Vectors are FP32, 1024 dimensions.
 After generating `output.txt`, create an interactive 3D UMAP map:
 
 ```
-venv\Scripts\python.exe visualize.py
+.\start_visualize.bat
 ```
 
 This opens `embedding_visualization.html` in the browser. Labels are visible by
